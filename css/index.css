@@ -1,0 +1,138 @@
+body{
+	width:100%;
+	overflow:hidden;
+	
+}
+
+.hide{ display:none;}
+
+.page{
+	width:100%;
+	height:100%;
+	position:absolute;
+	text-align:center;
+}
+
+.page .wrap{
+	height:500px;
+}
+
+.page-1-1{ background-color:#000000;}
+.page-2-1{ background-color:#ff3333;}
+.page-2-2{ background-color:#ff3333;}
+.page-3-1{ background-color:#ff7744;}
+.page-3-2{ background-color:#ff7744;}
+.page-4-1{ background-color:#ffff33;}
+.page-4-2{ background-color:#ffff33;}
+.page-5-1{ background-color:#33ff33;}
+.page-5-2{ background-color:#33ff33;}
+.page-6-1{ background-color:#0066ff;}
+.page-6-2{ background-color:#0066ff;}
+.page-7-1{ background-color:#220088;}
+.page-7-2{ background-color:#220088;}
+.page-8-1{ background-color:#7700ff;}
+.page-8-2{ background-color:#7700ff;}
+.page-9-1{ background-color:#ffffff;}
+
+.page-current{
+	z-index:1;
+}
+.up{
+	height:auto;width:25px;
+	position:absolute;
+	left:50%;
+	top:92%;
+	margin-left:-12px;
+}
+.dot {
+	height:auto;width:20px;
+	position:absolute;
+	left:50%;
+	top:87%;
+	margin-left:-10px;
+}
+.test{
+	height:auto;width:100px;
+	position:absolute;
+	left:50%;
+	top:47%;
+	margin-left:-10px;
+}
+
+
+
+/*第五页*/
+/*.page-five .page2-gaoliang {
+    height: 47.4206%;
+}
+*/
+.page5-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.page5-pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.animate .page5-pic .page5-border:nth-child(1) {
+    display: block;
+    z-index: 3;
+}
+
+.animate .page5-pic .page5-border:nth-child(1) img {
+    -webkit-transform: rotateZ(2deg) translate3d(-50%, 0, 0);
+    -webkit-transition-delay: 1s;
+}
+
+.animate .page5-pic .page5-border:nth-child(2) {
+    display: block;
+    z-index: 2;
+}
+
+.animate .page5-pic .page5-border:nth-child(2) img {
+    -webkit-transform: rotateZ(0deg) translate3d(-50%, 0, 0);
+    -webkit-transition-delay: .5s;
+}
+
+.animate .page5-pic .page5-border:nth-child(3) {
+    display: block;
+    z-index: 1;
+}
+
+.animate .page5-pic .page5-border:nth-child(3) img {
+    -webkit-transform: rotateZ(-2deg) translate3d(-50%, 0, 0);
+    -webkit-transition-delay: 0s;
+}
+
+.page5-border img {
+    position: absolute;
+    height: 65.476%;
+    top: 8.5317%;
+    left: 50%;
+    border-radius: 2px;
+    -webkit-transition: all 0.8s ease-out;
+    -webkit-transform: rotateZ(30deg) translate(80%, 80%);
+}
+
+.page5-border.remove-right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    -webkit-transition: .3s linear;
+    opacity: 0;
+}
+
+.page5-border.remove-left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -webkit-transition: .3s linear;
+    opacity: 0;
+}

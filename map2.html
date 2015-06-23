@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>map2</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+    .map {
+        width: 100%;
+        height: 385px
+    }
+    
+    .label {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 2px
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-12">
+            <div id="map" class="map"></div>
+        </div>
+    </div>
+    <script src="js/jquery-bootstrap-prism.js"></script>
+    <script src="js/jquery.tinyMap-3.2.3.js"></script>
+    
+    <script>
+    var map = $('#map');
+    map.tinyMap({
+        'zoom': 13,
+        'center': ["25.035255306871402", "121.56998634338379"],
+        'autoLocation': function(loc) {
+            if ('coords' in loc) {
+                var from = [loc.coords.latitude, loc.coords.longitude];
+                map.tinyMap('modify', {
+                    'direction': [{
+                        'from': from,
+                        'to': '臺北市信義區松德路171號6樓'
+                    }]
+                });
+            }
+        }
+    });
+    </script>
+</body>
+</html>
