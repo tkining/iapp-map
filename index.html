@@ -51,7 +51,16 @@
 	left: 50%;
 	margin-left: 65px;
     }	
-
+    
+	.textarea {
+    width: 600px;
+    height: 100px;
+    }
+    .button2 {
+    padding: 5px 15px;
+    background: black;
+    color: white;
+    }
 		
     </style>
 </head>
@@ -144,6 +153,17 @@ setTimeout("iframemap.location.reload(true)",5000);
         <div class="wrap">
             <img class="dot hide dot-scaleUp" src="img/dot1.png" />
             <img class="up moveIconUp" src="img/icon_up.png" />
+            
+            <textarea id="test">數碼數位 行動自媒體平台</textarea>
+<button class="button2" onclick="readMe();">語音閱讀</button>
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+<script>
+    function readMe() {
+        console.log($("#test").text());
+        responsiveVoice.speak($("#test").text(), "Chinese Female");
+    }
+</script>
+
         </div>
     </div>
     <div class="page page-2-2 hide">
