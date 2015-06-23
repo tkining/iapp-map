@@ -44,11 +44,11 @@
 
     }
     .button {
-		width: 55px;height: 40px;
+		width: auto;height: 75px;
         position: absolute;
-        top: 88%;
+        top: 80%;
         left: 50%;
-        margin-left: 94px;
+        margin-left: 80px;
     }	
     </style>
 </head>
@@ -70,10 +70,14 @@
               <!--   <p><button class="btn btn-md btn-warning" onclick="#map">
                     導航</button></p> -->
                     <iframe class="map" name="iframemap" src="map.html"></iframe>
+
+<a href="iframemap.window.location.reload()"><img src="img/reflash.png" class="button"></a>
+<!-- 
 <script language="javascript">
 setTimeout("iframemap.location.reload(true)",5000);
 </script>
 <input class="button" type="button" name="Button" value="重新導航" onclick="iframemap.window.location.reload()">
+-->
 					<!-- <p><button class="btn btn-md btn-warning" onclick="getLocation()">
 					現在位置</button></p>
 				<div id="mapholder"></div>
