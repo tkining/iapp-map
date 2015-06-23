@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>test</title>
+    <title>iApp-Map</title>
     <!-- about SEO -->
     <meta name="description" content="Digital+ 數碼數位 行動自媒體 iApp-Media from Taipei App-Version" />
     <meta name="keywords" content="Mommy,媽媽,App,Digital+,數碼數位,iApp,iApp-Media,iMag,Web App,O2O,SoLoMo,SMO" />
@@ -16,7 +16,7 @@
      -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
-    <link rel="apple-touch-icon" href="img/114" />
+    <link rel="apple-touch-icon" href="img/114.png" />
     <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)">
     <link rel="apple-touch-startup-image" href="startup-iphone-retina-portrait.png" media="(device-width:320px) and (-webkit-min-device-pixel-ratio: 2)">
     <link rel="apple-touch-startup-image" href="startup-iphone-5-portrait.png" media="(device-width:320px) and (device-height:568px) and (-webkit-min-device-pixel-ratio: 2)">
@@ -46,11 +46,9 @@
     .button {
 		width: 55px;height: 40px;
         position: absolute;
-        top: 90%;
+        top: 88%;
         left: 50%;
         margin-left: 94px;
-
-
     }	
     </style>
 </head>
@@ -71,8 +69,11 @@
                 <img class="up animated moveIconUp" src="img/icon_up.png" />
               <!--   <p><button class="btn btn-md btn-warning" onclick="#map">
                     導航</button></p> -->
-                    <iframe class="map"src="map.html"></iframe>
-<input class="button" type="button" name="button" value="重新導航" onclick="mp.window.location.reload()">
+                    <iframe class="map" name="iframemap" src="map.html"></iframe>
+<script language="javascript">
+iframemap.location.reload(true);
+</script>
+<input class="button" type="button" name="Button" value="重新導航" onclick="iframemap.window.location.reload()">
 					<!-- <p><button class="btn btn-md btn-warning" onclick="getLocation()">
 					現在位置</button></p>
 				<div id="mapholder"></div>
