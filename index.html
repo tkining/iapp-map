@@ -52,16 +52,32 @@
 	margin-left: 65px;
     }	
     
-	.textarea {
-    width: 600px;
-    height: 100px;
+	textarea {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        margin-left: -150px;
+        width: 300px;
+        height: 400px;
     }
     .button2 {
     padding: 5px 15px;
     background: black;
     color: white;
     }
+	.blur1 {
+		background: rgb(0,0,0); /*背景黑色，也讓先前指定的背景圖片回復沒有*/
+ zoom: 1; /*hasLayout*/
+		border-color: rgba(100%,100%,100%,0.2); /*20%白色*/
+		color: rgba(0%,0%,0%,1);
+	
+
+		-webkit-filter:blur(5px);
 		
+	}
+	.blur1:hover {
+		-webkit-filter:none;
+	}
     </style>
 </head>
 
@@ -146,15 +162,17 @@ setTimeout("iframemap.location.reload(true)",5000);
 				  }
 				</script> -->
 
-            //</div>
+            </div>
         </div>
     </div>
     <div class="page page-2-1 hide">
         <div class="wrap">
             <img class="dot hide dot-scaleUp" src="img/dot1.png" />
             <img class="up moveIconUp" src="img/icon_up.png" />
+            <input type="file" accept="image/*" capture="camera">
             
-            <textarea id="test"> 行動自媒體平台</textarea>
+            <textarea id="test"> 小王子第一章，當我六歲的時候，有一次我在一本敘述有關原始森林名叫往日真實故事集的書上看到一張美麗奇特的畫。它上面畫有一隻蟒蛇在吞吃一隻野獸。這裡就是那張畫的複寫。那本書上說：「那些蟒蛇連一口都沒有咀嚼，就把牠們獵獲的動物整個兒吞吃掉，然後就一動也不動的長眠六個月，來消化肚子裡的東西。」
+            </textarea>
 <button class="button2" onclick="readMe();">語音閱讀</button>
 <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
 <script>
@@ -176,6 +194,49 @@ setTimeout("iframemap.location.reload(true)",5000);
         <div class="wrap">
             <img class="dot hide dot-scaleUp" src="img/dot1.png" />
             <img class="up animated moveIconUp" src="img/icon_up.png" />
+            Read JSON
+            <script>
+			 document.write("<p>Reading JSON")
+            //$.getJSON('/params.json', function(data){
+			//  document.write("<p>Reading OK")
+			//  document.write(data);
+            //})
+			
+			$(document).on('ajaxBeforeSend', function(e, xhr, options){
+  // This gets fired for every Ajax request performed on the page.
+  // The xhr object and $.ajax() options are available for editing.
+  // Return false to cancel this request.
+})
+
+$.ajax({
+  type: 'GET',
+  url: '/projects',
+  // data to be added to query string:
+  data: { name: 'Zepto.js' },
+  // type of data we are expecting in return:
+  dataType: 'json',
+  timeout: 300,
+  context: $('body'),
+  success: function(data){
+    // Supposing this JSON payload was received:
+    //   {"project": {"id": 42, "html": "<div>..." }}
+    // append the HTML to context object.
+    this.append(data.project.html)
+  },
+  error: function(xhr, type){
+    alert('Ajax error!')
+  }
+})
+
+// post a JSON payload:
+$.ajax({
+  type: 'POST',
+  url: '/projects',
+  // post payload:
+  data: JSON.stringify({ name: 'Zepto.js' }),
+  contentType: 'application/json'
+})
+		   </script>
         </div>
     </div>
     <div class="page page-3-2 hide">
@@ -188,6 +249,7 @@ setTimeout("iframemap.location.reload(true)",5000);
         <div class="wrap">
             <img class="dot hide dot-scaleUp" src="img/dot1.png" />
             <img class="up animated moveIconUp" src="img/icon_up.png" />
+            <img src="img/p01-0b.jpg" class="blur1">
         </div>
     </div>
     <div class="page page-4-2 hide">
@@ -200,6 +262,7 @@ setTimeout("iframemap.location.reload(true)",5000);
         <div class="wrap">
             <img class="dot hide dot-scaleUp" src="img/dot1.png" />
             <img class="up animated moveIconUp" src="img/icon_up.png" />
+            
         </div>
     </div>
     <div class="page page-5-2 hide">
